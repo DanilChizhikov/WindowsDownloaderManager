@@ -1,0 +1,11 @@
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.exe.config
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.exe
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.pdb
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.MainForm.resources
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.Properties.Resources.resources
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csproj.GenerateResource.cache
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csproj.CoreCompileInputs.cache
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.exe
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.pdb
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csprojAssemblyReference.cache
+C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.MessageForm.resources
