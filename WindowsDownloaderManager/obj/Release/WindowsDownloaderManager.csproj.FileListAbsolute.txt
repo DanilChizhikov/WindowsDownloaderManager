@@ -9,3 +9,14 @@ C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Rel
 C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.pdb
 C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csprojAssemblyReference.cache
 C:\Users\clich\Desktop\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.MessageForm.resources
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.exe.config
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.exe
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\bin\Release\WindowsDownloaderManager.pdb
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csprojAssemblyReference.cache
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.MainForm.resources
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.MessageForm.resources
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.Properties.Resources.resources
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csproj.GenerateResource.cache
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.csproj.CoreCompileInputs.cache
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.exe
+C:\Users\clich\Documents\GitHub\WindowsDownloaderManager\WindowsDownloaderManager\obj\Release\WindowsDownloaderManager.pdb

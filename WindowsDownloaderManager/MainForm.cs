@@ -189,6 +189,10 @@ namespace WindowsDownloaderManager
             if (folderTextBox.Text != "" && urlTextBox.Text != "")
             {
                 startdwButton.Enabled = false;
+                folderTextBox.Enabled = false;
+                filenameTextBox.Enabled = false;
+                fileextensionTextBox.Enabled = false;
+                urlTextBox.Enabled = false;
 
                 string url = @"" + urlTextBox.Text;
                 string filepath = @"" + folderTextBox.Text;
@@ -327,8 +331,17 @@ namespace WindowsDownloaderManager
             }
             else
             {
-                MessageBox.Show("Done!", "DownLoad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageForm messageForm = new MessageForm();
+                messageForm.Text = "Download";
+                messageForm.HandleLabel.Text = "Download";
+                messageForm.TextLabel.Text = "The program is downloaded successfully!\nSaved to directory: " + folderTextBox.Text;
+                messageForm.ShowDialog();
+                //MessageBox.Show("Done!", "DownLoad", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 startdwButton.Enabled = true;
+                folderTextBox.Enabled = true;
+                filenameTextBox.Enabled = true;
+                fileextensionTextBox.Enabled = true;
+                urlTextBox.Enabled = true;
             }
         }
 
