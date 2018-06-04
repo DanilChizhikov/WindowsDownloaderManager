@@ -35,9 +35,7 @@
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.minimizedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MiniBtn = new System.Windows.Forms.Panel();
             this.MiniLbl = new System.Windows.Forms.Label();
-            this.ExitBtn = new System.Windows.Forms.Panel();
             this.ExitLbl = new System.Windows.Forms.Label();
             this.HandleLbl = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.Panel();
@@ -74,8 +72,6 @@
             this.HandlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconImg)).BeginInit();
             this.contextMenu.SuspendLayout();
-            this.MiniBtn.SuspendLayout();
-            this.ExitBtn.SuspendLayout();
             this.MenuPanel.SuspendLayout();
             this.ContentDownLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CastomProgressBar)).BeginInit();
@@ -88,9 +84,9 @@
             // HandlePanel
             // 
             this.HandlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(42)))));
+            this.HandlePanel.Controls.Add(this.ExitLbl);
+            this.HandlePanel.Controls.Add(this.MiniLbl);
             this.HandlePanel.Controls.Add(this.IconImg);
-            this.HandlePanel.Controls.Add(this.MiniBtn);
-            this.HandlePanel.Controls.Add(this.ExitBtn);
             this.HandlePanel.Controls.Add(this.HandleLbl);
             this.HandlePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.HandlePanel.Location = new System.Drawing.Point(0, 317);
@@ -135,24 +131,12 @@
             this.xCloseToolStripMenuItem.Text = "Close";
             this.xCloseToolStripMenuItem.Click += new System.EventHandler(this.xCloseToolStripMenuItem_Click);
             // 
-            // MiniBtn
-            // 
-            this.MiniBtn.Controls.Add(this.MiniLbl);
-            this.MiniBtn.Location = new System.Drawing.Point(583, 0);
-            this.MiniBtn.Name = "MiniBtn";
-            this.MiniBtn.Size = new System.Drawing.Size(36, 36);
-            this.MiniBtn.TabIndex = 2;
-            this.Tip.SetToolTip(this.MiniBtn, "Close");
-            this.MiniBtn.MouseEnter += new System.EventHandler(this.MiniBtn_MouseEnter);
-            this.MiniBtn.MouseLeave += new System.EventHandler(this.MiniBtn_MouseLeave);
-            // 
             // MiniLbl
             // 
-            this.MiniLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MiniLbl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.MiniLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.MiniLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MiniLbl.Location = new System.Drawing.Point(0, 0);
+            this.MiniLbl.Location = new System.Drawing.Point(580, 0);
             this.MiniLbl.Name = "MiniLbl";
             this.MiniLbl.Size = new System.Drawing.Size(36, 36);
             this.MiniLbl.TabIndex = 0;
@@ -160,28 +144,16 @@
             this.MiniLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Tip.SetToolTip(this.MiniLbl, "Minimized");
             this.MiniLbl.Click += new System.EventHandler(this.MiniLbl_Click);
+            this.MiniLbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MiniLbl_MouseDown);
             this.MiniLbl.MouseEnter += new System.EventHandler(this.MiniLbl_MouseEnter);
             this.MiniLbl.MouseLeave += new System.EventHandler(this.MiniLbl_MouseLeave);
-            // 
-            // ExitBtn
-            // 
-            this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(42)))));
-            this.ExitBtn.Controls.Add(this.ExitLbl);
-            this.ExitBtn.Location = new System.Drawing.Point(620, 0);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(36, 36);
-            this.ExitBtn.TabIndex = 1;
-            this.Tip.SetToolTip(this.ExitBtn, "Close");
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            this.ExitBtn.MouseEnter += new System.EventHandler(this.ExitBtn_MouseEnter);
-            this.ExitBtn.MouseLeave += new System.EventHandler(this.ExitBtn_MouseLeave);
+            this.MiniLbl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MiniLbl_MouseUp);
             // 
             // ExitLbl
             // 
-            this.ExitLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ExitLbl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.ExitLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.ExitLbl.Location = new System.Drawing.Point(0, 0);
+            this.ExitLbl.Location = new System.Drawing.Point(620, 0);
             this.ExitLbl.Name = "ExitLbl";
             this.ExitLbl.Size = new System.Drawing.Size(36, 36);
             this.ExitLbl.TabIndex = 0;
@@ -189,8 +161,10 @@
             this.ExitLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Tip.SetToolTip(this.ExitLbl, "Close");
             this.ExitLbl.Click += new System.EventHandler(this.ExitLbl_Click);
+            this.ExitLbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ExitLbl_MouseDown);
             this.ExitLbl.MouseEnter += new System.EventHandler(this.ExitLbl_MouseEnter);
             this.ExitLbl.MouseLeave += new System.EventHandler(this.ExitLbl_MouseLeave);
+            this.ExitLbl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ExitLbl_MouseUp);
             // 
             // HandleLbl
             // 
@@ -274,7 +248,7 @@
             this.ContentDownLoad.Controls.Add(this.label2);
             this.ContentDownLoad.Controls.Add(this.label1);
             this.ContentDownLoad.Controls.Add(this.URL_Label);
-            this.ContentDownLoad.Location = new System.Drawing.Point(195, 0);
+            this.ContentDownLoad.Location = new System.Drawing.Point(192, 6);
             this.ContentDownLoad.Name = "ContentDownLoad";
             this.ContentDownLoad.Size = new System.Drawing.Size(452, 305);
             this.ContentDownLoad.TabIndex = 2;
@@ -328,6 +302,7 @@
             // 
             this.fileextensionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.fileextensionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fileextensionTextBox.CausesValidation = false;
             this.fileextensionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.fileextensionTextBox.Location = new System.Drawing.Point(145, 139);
             this.fileextensionTextBox.Name = "fileextensionTextBox";
@@ -339,6 +314,7 @@
             // 
             this.filenameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.filenameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filenameTextBox.CausesValidation = false;
             this.filenameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.filenameTextBox.Location = new System.Drawing.Point(145, 96);
             this.filenameTextBox.Name = "filenameTextBox";
@@ -350,6 +326,7 @@
             // 
             this.folderTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.folderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.folderTextBox.CausesValidation = false;
             this.folderTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.folderTextBox.Location = new System.Drawing.Point(145, 181);
             this.folderTextBox.Name = "folderTextBox";
@@ -361,6 +338,7 @@
             // 
             this.urlTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.urlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.urlTextBox.CausesValidation = false;
             this.urlTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.urlTextBox.Location = new System.Drawing.Point(145, 53);
             this.urlTextBox.Name = "urlTextBox";
@@ -416,7 +394,7 @@
             this.ContentSettings.Controls.Add(this.UserNameLabel);
             this.ContentSettings.Controls.Add(this.ProxyTextBox);
             this.ContentSettings.Controls.Add(this.ProxyLabel);
-            this.ContentSettings.Location = new System.Drawing.Point(237, 243);
+            this.ContentSettings.Location = new System.Drawing.Point(980, 0);
             this.ContentSettings.Name = "ContentSettings";
             this.ContentSettings.Size = new System.Drawing.Size(452, 305);
             this.ContentSettings.TabIndex = 2;
@@ -426,6 +404,7 @@
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordTextBox.CausesValidation = false;
             this.PasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.PasswordTextBox.Location = new System.Drawing.Point(139, 190);
             this.PasswordTextBox.Name = "PasswordTextBox";
@@ -448,6 +427,7 @@
             // 
             this.UserNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.UserNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserNameTextBox.CausesValidation = false;
             this.UserNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.UserNameTextBox.Location = new System.Drawing.Point(139, 145);
             this.UserNameTextBox.Name = "UserNameTextBox";
@@ -469,6 +449,7 @@
             // 
             this.ProxyTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.ProxyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProxyTextBox.CausesValidation = false;
             this.ProxyTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ProxyTextBox.Location = new System.Drawing.Point(139, 101);
             this.ProxyTextBox.Name = "ProxyTextBox";
@@ -512,7 +493,7 @@
             this.AboutContent.Controls.Add(this.InfLabel);
             this.AboutContent.Controls.Add(this.LogoImg);
             this.AboutContent.Controls.Add(this.AppNameLabel);
-            this.AboutContent.Location = new System.Drawing.Point(192, 12);
+            this.AboutContent.Location = new System.Drawing.Point(204, 311);
             this.AboutContent.Name = "AboutContent";
             this.AboutContent.Size = new System.Drawing.Size(452, 305);
             this.AboutContent.TabIndex = 2;
@@ -555,9 +536,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(656, 353);
+            this.Controls.Add(this.ContentSettings);
             this.Controls.Add(this.ContentDownLoad);
             this.Controls.Add(this.AboutContent);
-            this.Controls.Add(this.ContentSettings);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.HandlePanel);
             this.Controls.Add(this.LoadImg);
@@ -575,8 +556,6 @@
             this.HandlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconImg)).EndInit();
             this.contextMenu.ResumeLayout(false);
-            this.MiniBtn.ResumeLayout(false);
-            this.ExitBtn.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
             this.ContentDownLoad.ResumeLayout(false);
             this.ContentDownLoad.PerformLayout();
@@ -596,9 +575,7 @@
 
         private System.Windows.Forms.Panel HandlePanel;
         private System.Windows.Forms.Label HandleLbl;
-        private System.Windows.Forms.Panel ExitBtn;
         private System.Windows.Forms.Label ExitLbl;
-        private System.Windows.Forms.Panel MiniBtn;
         private System.Windows.Forms.Label MiniLbl;
         private System.Windows.Forms.PictureBox IconImg;
         private System.Windows.Forms.Panel MenuPanel;

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageForm));
             this.HandlePanel = new System.Windows.Forms.Panel();
-            this.CloseButton = new System.Windows.Forms.Label();
             this.HandleLabel = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Label();
             this.TextLabel = new System.Windows.Forms.Label();
             this.ButtonYes = new System.Windows.Forms.Label();
             this.ButtonNo = new System.Windows.Forms.Label();
@@ -50,19 +50,6 @@
             this.HandlePanel.Size = new System.Drawing.Size(370, 35);
             this.HandlePanel.TabIndex = 0;
             // 
-            // CloseButton
-            // 
-            this.CloseButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.CloseButton.Location = new System.Drawing.Point(335, 0);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(35, 35);
-            this.CloseButton.TabIndex = 0;
-            this.CloseButton.Text = "X";
-            this.CloseButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            this.CloseButton.MouseEnter += new System.EventHandler(this.CloseButton_MouseEnter);
-            this.CloseButton.MouseLeave += new System.EventHandler(this.CloseButton_MouseLeave);
-            // 
             // HandleLabel
             // 
             this.HandleLabel.Location = new System.Drawing.Point(3, 0);
@@ -73,6 +60,20 @@
             this.HandleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.HandleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HandleLabel_MouseDown);
             this.HandleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HandleLabel_MouseMove);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.CloseButton.Location = new System.Drawing.Point(335, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(35, 35);
+            this.CloseButton.TabIndex = 0;
+            this.CloseButton.Text = "X";
+            this.CloseButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.CloseButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseButton_MouseDown);
+            this.CloseButton.MouseEnter += new System.EventHandler(this.CloseButton_MouseEnter);
+            this.CloseButton.MouseLeave += new System.EventHandler(this.CloseButton_MouseLeave);
             // 
             // TextLabel
             // 
@@ -94,6 +95,7 @@
             this.ButtonYes.Text = "Yes";
             this.ButtonYes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonYes.Click += new System.EventHandler(this.ButtonYes_Click);
+            this.ButtonYes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ButtonYes_MouseDown);
             this.ButtonYes.MouseEnter += new System.EventHandler(this.ButtonYes_MouseEnter);
             this.ButtonYes.MouseLeave += new System.EventHandler(this.ButtonYes_MouseLeave);
             // 
@@ -107,6 +109,7 @@
             this.ButtonNo.Text = "No";
             this.ButtonNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonNo.Click += new System.EventHandler(this.ButtonNo_Click);
+            this.ButtonNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ButtonNo_MouseDown);
             this.ButtonNo.MouseEnter += new System.EventHandler(this.ButtonNo_MouseEnter);
             this.ButtonNo.MouseLeave += new System.EventHandler(this.ButtonNo_MouseLeave);
             // 

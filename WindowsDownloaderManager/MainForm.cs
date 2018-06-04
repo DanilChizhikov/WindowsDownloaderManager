@@ -96,17 +96,6 @@ namespace WindowsDownloaderManager
             Mouse_Move(e);
         }
 
-        private void ExitLbl_Click(object sender, EventArgs e)
-        {
-            //ExitMethod(true);
-            MessageForm messageForm = new MessageForm();
-            messageForm.Text = "Exit";
-            messageForm.HandleLabel.Text = "Exit";
-            messageForm.TextLabel.Text = "Are you can close this programm?";
-            messageForm.CloseBool = true;
-            messageForm.ShowDialog();
-        }
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             //ExitMethod(true);
@@ -114,32 +103,12 @@ namespace WindowsDownloaderManager
 
         private void ExitLbl_MouseEnter(object sender, EventArgs e)
         {
-            ExitBtn.BackColor = Color.FromArgb(51, 55, 56);
-        }
-
-        private void ExitBtn_MouseEnter(object sender, EventArgs e)
-        {
-            ExitBtn.BackColor = Color.FromArgb(51, 55, 56);
-        }
-
-        private void ExitBtn_MouseLeave(object sender, EventArgs e)
-        {
-            ExitBtn.BackColor = Color.FromArgb(37, 41, 42);
+            ExitLbl.BackColor = Color.FromArgb(51, 55, 56);
         }
 
         private void MiniLbl_MouseEnter(object sender, EventArgs e)
         {
-            MiniBtn.BackColor = Color.FromArgb(51, 55, 56);
-        }
-
-        private void MiniBtn_MouseEnter(object sender, EventArgs e)
-        {
-            MiniBtn.BackColor = Color.FromArgb(51, 55, 56);
-        }
-
-        private void MiniBtn_MouseLeave(object sender, EventArgs e)
-        {
-            MiniBtn.BackColor = Color.FromArgb(37, 41, 42);
+            MiniLbl.BackColor = Color.FromArgb(51, 55, 56);
         }
 
         private void MiniLbl_Click(object sender, EventArgs e)
@@ -267,12 +236,12 @@ namespace WindowsDownloaderManager
 
         private void ExitLbl_MouseLeave(object sender, EventArgs e)
         {
-            ExitBtn.BackColor = Color.FromArgb(37, 41, 42);
+            ExitLbl.BackColor = Color.FromArgb(37, 41, 42);
         }
 
         private void MiniLbl_MouseLeave(object sender, EventArgs e)
         {
-            MiniBtn.BackColor = Color.FromArgb(37, 41, 42);
+            MiniLbl.BackColor = Color.FromArgb(37, 41, 42);
         }
 
         private void xCloseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -293,6 +262,8 @@ namespace WindowsDownloaderManager
         private void MainForm_Load(object sender, EventArgs e)
         {
             //CompletedLabel.BackColor = Color.FromArgb(61, 63, 65, 255);
+            this.Size = new Size(656, 353);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void AboutButtom_MouseEnter(object sender, EventArgs e)
@@ -307,11 +278,43 @@ namespace WindowsDownloaderManager
 
         private void AboutButtom_Click(object sender, EventArgs e)
         {
-            ContentSettings.Size = new Size(452, 305);
-            ContentSettings.Location = new Point(193, 7);
+            AboutContent.Size = new Size(452, 305);
+            AboutContent.Location = new Point(193, 7);
             ContentSettings.Visible = false;
             ContentDownLoad.Visible = false;
             AboutContent.Visible = true;
+        }
+
+        private void ExitLbl_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                ExitLbl.BackColor = Color.FromArgb(52, 62, 64);
+        }
+
+        private void ExitLbl_Click(object sender, EventArgs e)
+        {
+            MessageForm messageForm = new MessageForm();
+            messageForm.Text = "Exit";
+            messageForm.HandleLabel.Text = "Exit";
+            messageForm.TextLabel.Text = "Are you can close this programm?";
+            messageForm.CloseBool = true;
+            messageForm.ShowDialog();
+        }
+
+        private void ExitLbl_MouseUp(object sender, MouseEventArgs e)
+        {
+            ExitLbl.BackColor = Color.FromArgb(51, 55, 56);
+        }
+
+        private void MiniLbl_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                MiniLbl.BackColor = Color.FromArgb(52, 62, 64);
+        }
+
+        private void MiniLbl_MouseUp(object sender, MouseEventArgs e)
+        {
+            MiniLbl.BackColor = Color.FromArgb(51, 55, 56);
         }
 
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -342,6 +345,7 @@ namespace WindowsDownloaderManager
                 filenameTextBox.Enabled = true;
                 fileextensionTextBox.Enabled = true;
                 urlTextBox.Enabled = true;
+                webClient.Dispose();
             }
         }
 

@@ -97,6 +97,24 @@ namespace WindowsDownloaderManager
             ButtonYes.BackColor = Color.FromArgb(112, 130, 132);
         }
 
+        private void ButtonYes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                ButtonYes.BackColor = Color.FromArgb(52, 62, 64);
+        }
+
+        private void ButtonNo_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                ButtonNo.BackColor = Color.FromArgb(52, 62, 64);
+        }
+
+        private void CloseButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                CloseButton.BackColor = Color.FromArgb(52, 62, 64);
+        }
+
         private void HandleLabel_MouseDown(object sender, MouseEventArgs e)
         {
             //Get position Form and Mouse
